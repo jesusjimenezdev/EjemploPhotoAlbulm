@@ -12,6 +12,10 @@
 		E10947CF20F16B9400BD4982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10947CD20F16B9400BD4982 /* Main.storyboard */; };
 		E10947D120F16B9500BD4982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10947D020F16B9500BD4982 /* Assets.xcassets */; };
 		E10947D420F16B9500BD4982 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10947D220F16B9500BD4982 /* LaunchScreen.storyboard */; };
+		E10947DC20F208AE00BD4982 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10947DB20F208AE00BD4982 /* ImageCollectionViewCell.swift */; };
+		E10947DE20F20B6D00BD4982 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10947DD20F20B6D00BD4982 /* NewViewController.swift */; };
+		E10947E020F20D8E00BD4982 /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10947DF20F20D8E00BD4982 /* PresentAnimator.swift */; };
+		E10947E220F2623200BD4982 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10947E120F2623200BD4982 /* DismissAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		E10947D020F16B9500BD4982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10947D320F16B9500BD4982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10947D520F16B9500BD4982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E10947DB20F208AE00BD4982 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E10947DD20F20B6D00BD4982 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		E10947DF20F20D8E00BD4982 /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
+		E10947E120F2623200BD4982 /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				E10947D020F16B9500BD4982 /* Assets.xcassets */,
 				E10947D220F16B9500BD4982 /* LaunchScreen.storyboard */,
 				E10947D520F16B9500BD4982 /* Info.plist */,
+				E10947DB20F208AE00BD4982 /* ImageCollectionViewCell.swift */,
+				E10947DD20F20B6D00BD4982 /* NewViewController.swift */,
+				E10947DF20F20D8E00BD4982 /* PresentAnimator.swift */,
+				E10947E120F2623200BD4982 /* DismissAnimator.swift */,
 			);
 			path = PhotoAlbulm;
 			sourceTree = "<group>";
@@ -96,6 +108,7 @@
 				TargetAttributes = {
 					E10947C520F16B9400BD4982 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10947DC20F208AE00BD4982 /* ImageCollectionViewCell.swift in Sources */,
+				E10947E220F2623200BD4982 /* DismissAnimator.swift in Sources */,
+				E10947E020F20D8E00BD4982 /* PresentAnimator.swift in Sources */,
 				E10947CC20F16B9400BD4982 /* ViewController.swift in Sources */,
 				E10947CA20F16B9400BD4982 /* AppDelegate.swift in Sources */,
+				E10947DE20F20B6D00BD4982 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,16 +298,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W85GJYFB35;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoAlbulm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoAlbulm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,16 +317,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W85GJYFB35;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoAlbulm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoAlbulm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
